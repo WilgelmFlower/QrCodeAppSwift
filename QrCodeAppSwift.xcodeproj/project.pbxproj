@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		ED44BDD028EAF4430038F2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED44BDCF28EAF4430038F2CB /* AppDelegate.swift */; };
 		ED44BDD228EAF4430038F2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED44BDD128EAF4430038F2CB /* SceneDelegate.swift */; };
-		ED44BDD428EAF4430038F2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED44BDD328EAF4430038F2CB /* ViewController.swift */; };
-		ED44BDD728EAF4430038F2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED44BDD528EAF4430038F2CB /* Main.storyboard */; };
 		ED44BDD928EAF4430038F2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED44BDD828EAF4430038F2CB /* Assets.xcassets */; };
 		ED44BDDC28EAF4430038F2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED44BDDA28EAF4430038F2CB /* LaunchScreen.storyboard */; };
+		ED5617CE28EAF63400073954 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5617CD28EAF63400073954 /* ModuleBuilder.swift */; };
+		ED5617D028EAF64100073954 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5617CF28EAF64100073954 /* CameraViewModel.swift */; };
+		ED5617D228EAF64C00073954 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5617D128EAF64C00073954 /* Presenter.swift */; };
+		ED5617D428EAF65600073954 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5617D328EAF65600073954 /* WebViewController.swift */; };
+		ED5617D628EAF66300073954 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5617D528EAF66300073954 /* CaptureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ED44BDCC28EAF4430038F2CB /* QrCodeAppSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QrCodeAppSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED44BDCF28EAF4430038F2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED44BDD128EAF4430038F2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED44BDD328EAF4430038F2CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED44BDD628EAF4430038F2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED44BDD828EAF4430038F2CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED44BDDB28EAF4430038F2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED44BDDD28EAF4430038F2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED5617CD28EAF63400073954 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		ED5617CF28EAF64100073954 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		ED5617D128EAF64C00073954 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		ED5617D328EAF65600073954 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		ED5617D528EAF66300073954 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,74 @@
 		ED44BDCE28EAF4430038F2CB /* QrCodeAppSwift */ = {
 			isa = PBXGroup;
 			children = (
-				ED44BDCF28EAF4430038F2CB /* AppDelegate.swift */,
-				ED44BDD128EAF4430038F2CB /* SceneDelegate.swift */,
-				ED44BDD328EAF4430038F2CB /* ViewController.swift */,
-				ED44BDD528EAF4430038F2CB /* Main.storyboard */,
+				ED5617C728EAF59A00073954 /* Resources */,
+				ED5617C628EAF59300073954 /* Sources */,
+			);
+			path = QrCodeAppSwift;
+			sourceTree = "<group>";
+		};
+		ED5617C628EAF59300073954 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				ED5617C928EAF5AC00073954 /* App */,
+				ED5617CA28EAF5B200073954 /* Assembler */,
+				ED5617C828EAF5A200073954 /* Model */,
+				ED5617CB28EAF5BB00073954 /* Presenter */,
+				ED5617CC28EAF5C000073954 /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		ED5617C728EAF59A00073954 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				ED44BDD828EAF4430038F2CB /* Assets.xcassets */,
 				ED44BDDA28EAF4430038F2CB /* LaunchScreen.storyboard */,
 				ED44BDDD28EAF4430038F2CB /* Info.plist */,
 			);
-			path = QrCodeAppSwift;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED5617C828EAF5A200073954 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED5617CF28EAF64100073954 /* CameraViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED5617C928EAF5AC00073954 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ED44BDCF28EAF4430038F2CB /* AppDelegate.swift */,
+				ED44BDD128EAF4430038F2CB /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ED5617CA28EAF5B200073954 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				ED5617CD28EAF63400073954 /* ModuleBuilder.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		ED5617CB28EAF5BB00073954 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED5617D128EAF64C00073954 /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ED5617CC28EAF5C000073954 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED5617D328EAF65600073954 /* WebViewController.swift */,
+				ED5617D528EAF66300073954 /* CaptureViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +192,6 @@
 			files = (
 				ED44BDDC28EAF4430038F2CB /* LaunchScreen.storyboard in Resources */,
 				ED44BDD928EAF4430038F2CB /* Assets.xcassets in Resources */,
-				ED44BDD728EAF4430038F2CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +202,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED44BDD428EAF4430038F2CB /* ViewController.swift in Sources */,
 				ED44BDD028EAF4430038F2CB /* AppDelegate.swift in Sources */,
+				ED5617D428EAF65600073954 /* WebViewController.swift in Sources */,
+				ED5617D628EAF66300073954 /* CaptureViewController.swift in Sources */,
+				ED5617D028EAF64100073954 /* CameraViewModel.swift in Sources */,
 				ED44BDD228EAF4430038F2CB /* SceneDelegate.swift in Sources */,
+				ED5617CE28EAF63400073954 /* ModuleBuilder.swift in Sources */,
+				ED5617D228EAF64C00073954 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ED44BDD528EAF4430038F2CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED44BDD628EAF4430038F2CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ED44BDDA28EAF4430038F2CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +349,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TYV66VL2S3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = QrCodeAppSwift/Info.plist;
+				INFOPLIST_FILE = QrCodeAppSwift/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +361,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.QrCodeAppSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +379,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TYV66VL2S3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = QrCodeAppSwift/Info.plist;
+				INFOPLIST_FILE = QrCodeAppSwift/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +391,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.QrCodeAppSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
